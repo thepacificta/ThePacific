@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>ThePacific - Travel Agency</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="css/animate.css">
+	
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="css/jquery.timepicker.css">
+
+	
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Pacific<span>Travel Agency</span></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+					<li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
+					<li class="nav-item"><a href="hotel.html" class="nav-link">Hotel</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- END nav -->
+	
+	<div class="hero-wrap js-fullheight" style="background-image: url('images/bg_5.jpg');">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
+				<div class="col-md-7 ftco-animate">
+					<span class="subheading">Welcome to Pacific</span>
+					<h1 class="mb-4">Discover Okinowa with Us</h1>
+					<p class="caps">Travel anywhere, withouut retracing your steps</p>
+				</div>
+				<a href="https://vimeo.com/107584991" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
+					<span class="fa fa-play"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<section class="ftco-section ftco-no-pb">
+		<div class="container">
+		 <div class="row">
+		  <div class="col-md-12">
+		   <div class="search-wrap-1 ftco-animate">
+			<form id="search-form" action="#" method="GET" class="search-property-1">
+			 <div class="row no-gutters">
+			   <div class="col-lg d-flex">
+				 <div class="form-group p-4 border-0">
+				   <label for="checkin_date">Check-in date</label>
+				   <div class="form-field">
+					 <div class="icon"><span class="fa fa-calendar"></span></div>
+					 <input type="text" id="checkin_date" name="checkin" class="form-control checkin_date" placeholder="Check In Date" required>
+				   </div>
+				 </div>
+			   </div>
+			   <div class="col-lg d-flex">
+				 <div class="form-group p-4">
+				   <label for="checkout_date">Check-out date</label>
+				   <div class="form-field">
+					 <div class="icon"><span class="fa fa-calendar"></span></div>
+					 <input type="text" id="checkout_date" name="checkout" class="form-control checkout_date" placeholder="Check Out Date" required>
+				   </div>
+				 </div>
+			   </div>
+			   <div class="col-lg d-flex">
+				 <div class="form-group d-flex w-100 border-0">
+				   <div class="form-field w-100 align-items-center d-flex">
+					 <input type="submit" value="Search" class="align-self-stretch form-control btn btn-primary">
+				   </div>
+				 </div>
+			   </div>
+			 </div>
+			</form>
+		   </div>
+		  </div>
+		 </div>
+		</div>
+	   </section>
+	   
+	   <script>
+	   document.getElementById('search-form').addEventListener('submit', function(event) {
+		   event.preventDefault(); // Prevent the default form submission
+	   
+		   const baseURL = 'https://www.booking.com/searchresults.en-us.html';
+				  const destination = 'Okinawa%2C+Japan'; // Set the destination as per your requirement
+				  const checkinDate = document.getElementById('checkin_date').value;
+				  const checkoutDate = document.getElementById('checkout_date').value;
+				  const encodedCheckinDate = encodeURIComponent(checkinDate);
+				  const encodedCheckoutDate = encodeURIComponent(checkoutDate);
+				  const searchURL = `${baseURL}?ss=${destination}&order=getaway_deals_upsorter&aid=348858&lang=en-us&sb=1&src_elem=sb&dest_id=2351&dest_type=region&ac_position=0&ac_click_type=b&ac_langcode=en&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=8e0a3cb03d730286&ac_meta=GhA4ZTBhM2NiMDNkNzMwMjg2IAAoATICZW46B09raW5vd2FAAUoHb2tpbmF3YVDcJA%3D%3D&checkin=${encodedCheckinDate}&checkout=${encodedCheckoutDate}&group_adults=2&no_rooms=1&group_children=0&lpsrc=sb`;
+	   
+	  
+		   window.location.href = searchURL;
+	   });
+	   </script>
+
+		<section class="ftco-section services-section">
+			<div class="container">
+				<div class="row d-flex">
+					<div class="col-md-6 order-md-last heading-section pl-md-5 ftco-animate d-flex align-items-center">
+						<div class="w-100">
+							<span class="subheading">Welcome to Pacific</span>
+							<h2 class="mb-4">It's time to start your adventure</h2>
+							<p>Experience the raw natural beauty and rich cultural heritage of Okinawa, from the castle ruins and heritage sites of the main island to the secluded coves, vibrant reefs, and clear waters of the Kerama and Yaeyama islands. Discover Okinawa at your own pace, island by island, moment by moment.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="ftco-section ftco-about img"style="background-image: url(images/bg_4.jpg);">
+			<div class="overlay"></div>
+			<div class="container py-md-5">
+				<div class="row py-md-5">
+					<div class="col-md d-flex align-items-center justify-content-center">
+						<a href="https://vimeo.com/7372104" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
+							<span class="fa fa-play"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ftco-section ftco-about ftco-no-pt img">
+			<div class="container">
+				<div class="row d-flex">
+					<div class="col-md-12 about-intro">
+						<div class="row">
+							<div class="col-md-6 d-flex align-items-stretch">
+								<div class="img d-flex w-100 align-items-center justify-content-center" style="background-image:url(images/about-1.jpg);">
+								</div>
+							</div>
+							<div class="col-md-6 pl-md-5 py-5">
+								<div class="row justify-content-start pb-3">
+									<div class="col-md-12 heading-section ftco-animate">
+										<span class="subheading">About Us</span>
+										<h2 class="mb-4">Make Your Tour Memorable and Safe With Us</h2>
+										<p>The islands of Okinawa are as diverse as they are plentiful, stretching from the main island in the north to Ishigaki and beyond in the south. There are 160 islands large and small, inhabited and uninhabited. Authentic Okinawan experiences await, with cultural treasures, outdoor adventure, and world-class diving just some of the draws. Choose the perfect destination for your unforgettable Okinawa experience.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ftco-section testimony-section bg-bottom" style="background-image: url(images/bg_1.jpg);">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row justify-content-center pb-4">
+					<div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+						<span class="subheading">Testimonial</span>
+						<h2 class="mb-4">Tourist Feedback</h2>
+					</div>
+				</div>
+				<div class="row ftco-animate">
+					<div class="col-md-12">
+						<div class="carousel-testimony owl-carousel">
+							<div class="item">
+								<div class="testimony-wrap py-4">
+									<div class="text">
+										<p class="star">
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+										</p>
+										<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+										<div class="d-flex align-items-center">
+											<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+											<div class="pl-3">
+												<p class="name">Roger Scott</p>
+												<span class="position">Marketing Manager</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony-wrap py-4">
+									<div class="text">
+										<p class="star">
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+										</p>
+										<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+										<div class="d-flex align-items-center">
+											<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+											<div class="pl-3">
+												<p class="name">Roger Scott</p>
+												<span class="position">Marketing Manager</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony-wrap py-4">
+									<div class="text">
+										<p class="star">
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+										</p>
+										<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+										<div class="d-flex align-items-center">
+											<div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
+											<div class="pl-3">
+												<p class="name">Roger Scott</p>
+												<span class="position">Marketing Manager</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony-wrap py-4">
+									<div class="text">
+										<p class="star">
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+										</p>
+										<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+										<div class="d-flex align-items-center">
+											<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+											<div class="pl-3">
+												<p class="name">Roger Scott</p>
+												<span class="position">Marketing Manager</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony-wrap py-4">
+									<div class="text">
+										<p class="star">
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+										</p>
+										<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+										<div class="d-flex align-items-center">
+											<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+											<div class="pl-3">
+												<p class="name">Roger Scott</p>
+												<span class="position">Marketing Manager</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<footer class="ftco-footer bg-bottom ftco-no-pt" style="background-image: url(images/bg_3.jpg);">
+			<div class="container">
+			  <div class="row mb-5">
+				<div class="col-md pt-5">
+				  <div class="ftco-footer-widget pt-md-5 mb-4">
+					<h2 class="ftco-heading-2">About</h2>
+					<p>Japan's southernmost prefecture, Okinawa is a chain of islands with its own history as an independent kingdom and a distinctly subtropical climate, as well as the birthplace of karate. Explore the ruins and restored castles of the Ryukyu kings, and visit magnificent beaches and coastlines with an amazing array of coral and undersea life.</p>
+					<ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+					  <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
+					  <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
+					</ul>
+				  </div>
+				</div>
+				<div class="col-md pt-5 border-left">
+				  <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
+					<h2 class="ftco-heading-2">Infromation</h2>
+					<ul class="list-unstyled">
+					  <li><a href="#" class="py-2 d-block">Online Enquiry</a></li>
+					  <li><a href="#" class="py-2 d-block">General Enquiries</a></li>
+					  <li><a href="#" class="py-2 d-block">Booking Conditions</a></li>
+					  <li><a href="#" class="py-2 d-block">Privacy and Policy</a></li>
+					  <li><a href="#" class="py-2 d-block">Refund Policy</a></li>
+					  <li><a href="#" class="py-2 d-block">Call Us</a></li>
+					</ul>
+				  </div>
+				</div>
+				<div class="col-md pt-5 border-left">
+				 <div class="ftco-footer-widget pt-md-5 mb-4">
+				  <h2 class="ftco-heading-2">Experience</h2>
+				  <ul class="list-unstyled">
+					<li><a href="#" class="py-2 d-block">Adventure</a></li>
+					<li><a href="#" class="py-2 d-block">Hotel and Restaurant</a></li>
+					<li><a href="#" class="py-2 d-block">Beach</a></li>
+					<li><a href="#" class="py-2 d-block">Nature</a></li>
+					<li><a href="#" class="py-2 d-block">Camping</a></li>
+					<li><a href="#" class="py-2 d-block">Party</a></li>
+				  </ul>
+				</div>
+			  </div>
+			  <div class="col-md pt-5 border-left">
+				<div class="ftco-footer-widget pt-md-5 mb-4">
+				 <h2 class="ftco-heading-2">Have any Questions?</h2>
+				 <div class="block-23 mb-3">
+				   <ul>
+					 <li><span class="icon fa fa-map-marker"></span><span class="text">2851, Friends Layout ITPL Bypass Road Doddanekkundi Extention Bangalore 560037, India</span></li>
+					 <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+6 2831853071</span></a></li>
+					 <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">  thepacifictravelagency@gmail.com</span></a></li>
+				   </ul>
+				 </div>
+			   </div>
+			 </div>
+		   </div>
+		   <div class="row">
+			<div class="col-md-12 text-center">
+		  
+			  <p>
+				Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <a href="https://youtu.be/dQw4w9WgXcQ?si=MgtoKrarWUO8T3V8" target="_blank">The Pacific Travel Agency</a>
+				</p>
+			  </div>
+			</div>
+		  </div>
+		  </footer>
+			
+			
+
+			<!-- loader -->
+			<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+			<script src="js/jquery.min.js"></script>
+			<script src="js/jquery-migrate-3.0.1.min.js"></script>
+			<script src="js/popper.min.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+			<script src="js/jquery.easing.1.3.js"></script>
+			<script src="js/jquery.waypoints.min.js"></script>
+			<script src="js/jquery.stellar.min.js"></script>
+			<script src="js/owl.carousel.min.js"></script>
+			<script src="js/jquery.magnific-popup.min.js"></script>
+			<script src="js/jquery.animateNumber.min.js"></script>
+			<script src="js/bootstrap-datepicker.js"></script>
+			<script src="js/scrollax.min.js"></script>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+			<script src="js/google-map.js"></script>
+			<script src="js/main.js"></script>
+			
+		</body>
+		</html>
